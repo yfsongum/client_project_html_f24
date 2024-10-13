@@ -1,46 +1,181 @@
 body {
     background-color: #11296b;
     color: #ffcb05;
+    font-family: "Baloo 2", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    font-weight: 500;
+    text-align: center;
 }
 
 h1 {
-    font-size: 300%;
-    font-weight: bold;
-    text-align: center;
-    font-family: "Trebuchet MS", "Courier New", sans-serif;
+    font-size: clamp(2rem, 5vw, 3rem);
 }
 
-h2, h3 {
-    font-size: 200%;
-    font-weight: bold;
-    text-align: center;
-    font-family: "Trebuchet MS", "Courier New", sans-serif;
+h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
 }
 
-p {
-    font-size: 130%;
-    line-height: 40px;
-    font-family: "Trebuchet MS", "Courier New", sans-serif;
+h3 {
+    font-size: clamp(1.25rem, 3.5vw, 2rem);
 }
 
-img {
-    border: 5px solid #ededed;
-    padding: 10px;
-    margin: 20px;
-    border-top-right-radius: 30px;
+p, a {
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    line-height: 1.5;
 }
 
-ul {
-    display: inline-block;
-    margin-left: 50px;
-    font-family: "Trebuchet MS", "Courier New", sans-serif;
+a:focus, a:hover,
+button:focus, button:hover,
+input:focus, input:hover,
+textarea:focus, textarea:hover,
+select:focus, select:hover {
+    outline: 3px solid #ffffff; /* // Adds a bold yellow outline to indicate focus */
+    background-color: #2f65a7; /* // Changes background for better visibility */
+    color: #ffcb05; /* // Ensures contrast of text */
+    box-shadow: 0 0 10px #9a3324; /* // Adds a subtle shadow for emphasis */
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* // Smooth transition for better experience */
 }
 
+/* Skip link */
 .skip a {
-    position: absolute; /* have precise control over where the element appears on the page */
-    top: -40px; /* positioning .skip off-screen */
+    position: absolute;
+    top: -60px; /* Hidden initially */
+    left: 10px;
+    background: #ffcb05;
+    color: #11296b;
+    padding: 0.5rem;
+    z-index: 100;
+    text-decoration: none;
 }
-  
+
 .skip a:focus {
-    top:20px;
+    top: 20px; /* Becomes visible when focused */
+}
+
+/* Layout with CSS Grid */
+header, main, footer {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+header {
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+nav ul {
+    display: grid;
+    gap: 0.5rem;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li {
+    background: var(--color-primary-alt);
+    border-radius: var(--border-radius);
+}
+
+nav ul a {
+    display: block;
+    padding: 0.75rem;
+    text-align: center;
+    color: var(--color-light);
+    text-decoration: none;
+    background: var(--color-secondary);
+    border-radius: var(--border-radius);
+}
+
+nav ul a.active, nav ul a:hover, nav ul a:focus {
+    background: #412d86;
+    color: #ffffff;
+}
+
+
+
+/* Main content */
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.indiv_rescrs {
+    display: grid;
+    gap: 1rem;
+    /*background: #0f6f38;*/
+    border-radius: var(--border-radius);
+    padding: 1rem;
+}
+
+.indiv_rescrs h2 {
+    background-color: #3a00ff;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: var(--border-radius);
+}
+
+.indiv_rescrs p, .indiv_rescrs ul {
+    padding: 0 0.5rem;
+}
+
+/* Images */
+img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+}
+
+/* Footer */
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.contact-info, .quick-links {
+    background: #3a00ff;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+}
+
+.footer-bottom {
+    grid-column: 1 / -1;
+    background: #d42257;
+    text-align: center;
+    padding: 0.5rem;
+    color: #fff;
+}
+
+.quick-links ul {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.quick-links a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Adjustments for fluid layout */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+main, header, footer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+    nav ul {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
