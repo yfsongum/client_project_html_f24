@@ -1,7 +1,7 @@
 body {
-    background-color: #11296b;
-    color: #ffcb05;
-    font-family: "Baloo 2", sans-serif;
+    background-color: #ffffff; /*#11296b;*/
+    color: black;/*#ffcb05;*/
+    font-family: "Montserrat", sans-serif;
     font-size: 1rem;
     line-height: 1.5;
 }
@@ -12,15 +12,31 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: 3rem; /* Largest for the highest level */
+    color: #11296b;  /* Blue color for h1 */
+    font-weight: bolder;
+    padding: 3rem;
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent image repetition */
 }
 
 h2 {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    font-size: 2rem; /* Smaller size than h1 */
+    background-color: #702082; /* Blue background for main titles */
+    color: #ffcb05;  /* White text on blue background */
+    padding: 0.5rem; /* Add padding to make the background more prominent */
+    text-align: center;
+    border-radius: 8px; /* Optional: Add slight rounding for a modern look */
 }
 
 h3 {
-    font-size: clamp(1.25rem, 3.5vw, 2rem);
+    font-size: 1.5rem; /* Smaller than h2 */
+    color: #000000;  /* Black color for h3 */
+}
+
+.contact-info h3, .quick-links h3 {
+    color: #ffcb05;
 }
 
 p, a {
@@ -28,19 +44,24 @@ p, a {
     line-height: 1.5;
 }
 
+a, a::before, a::after {
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
 a:focus, a:hover,
 button:focus, button:hover,
 input:focus, input:hover,
 textarea:focus, textarea:hover,
 select:focus, select:hover {
+    text-decoration: underline;
     outline: 3px solid #ffffff; /* // Adds a bold yellow outline to indicate focus */
-    background-color: #2f65a7; /* // Changes background for better visibility */
-    color: #ffcb05; /* // Ensures contrast of text */
+    background-color: #bad8fc; /* // Changes background for better visibility */
+    color: #d86018; /* // Ensures contrast of text */
     box-shadow: 0 0 10px #9a3324; /* // Adds a subtle shadow for emphasis */
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* // Smooth transition for better experience */
 }
 
-/* Skip link */
 .skip a {
     position: absolute;
     top: -60px; /* Hidden initially */
@@ -54,6 +75,68 @@ select:focus, select:hover {
 
 .skip a:focus {
     top: 20px; /* Becomes visible when focused */
+}
+
+.resource-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    gap: 1.5rem; /* Add some spacing between items */
+}
+
+/* Ensuring a specific child spans the entire row */
+/* Academic Success's first child, Resources in times of crisis's last child, and First-Gen Gateway's last child */
+.academic-success li:first-child,
+.crisis-resources li:last-child,
+.first-gen-gateway li:last-child {
+    grid-column: span 2; /* Span the entire row */
+}
+
+/* Align all children of certain sections horizontally on the same row */
+/* Immigration and Visa, Cultural Challenges and Support, Academic and Career Guidance, and Paying for School */
+.immigration-visa ul,
+.cultural-challenges-support ul,
+.academic-career-guidance ul,
+.paying-for-school ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Create horizontal alignment */
+    gap: 1rem;
+}
+
+/* Main item styling to ensure consistent presentation */
+.main-item {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.main-item.has-children {
+    grid-column: span 2; /* These items will span the entire row */
+}
+
+/* Main items that don't have children unordered lists */
+.main-item:not(.has-children) {
+    grid-column: auto; /* These items should take up one column */
+}
+
+.main-item ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Auto-adjust columns for child items */
+    gap: 0.5rem;
+}
+
+
+.main-item a {
+    text-decoration: underline;
+    color: #3a00ff; /* Link color */
+    font-weight: bold; /* Emphasize the main items */
+}
+
+.main-item ul li a {
+    font-weight: normal; /* Child items will have normal weight */
+    text-decoration: underline; /* Remove underline from child items */
+}
+
+.intro p, .academic-success p, .school-life-balance p, .crisis-resources p{
+    text-align: center;
 }
 
 /* Layout with CSS Grid */
@@ -73,6 +156,8 @@ nav ul {
     gap: 0.5rem;
     padding: 0;
     list-style: none;
+    background-color: #00274C;
+    color: #ffcb05;
 }
 
 nav ul li {
@@ -96,7 +181,6 @@ nav ul a.active, nav ul a:hover, nav ul a:focus {
 }
 
 
-
 /* Main content */
 main {
     display: grid;
@@ -113,14 +197,21 @@ main {
 }
 
 .indiv_rescrs h2 {
-    background-color: #3a00ff;
+    background-color: #412d86;
     color: #fff;
     padding: 0.5rem;
     border-radius: var(--border-radius);
 }
 
+
 .indiv_rescrs p, .indiv_rescrs ul {
     padding: 0 0.5rem;
+}
+
+.indiv_rescrs ul {
+    display: grid; /* Use grid to structure unordered lists */
+    grid-template-columns: 1fr 1fr; /* 2-column layout */
+    gap: 1rem;
 }
 
 /* Images */
@@ -130,22 +221,38 @@ img {
     border-radius: var(--border-radius);
 }
 
+figcaption {
+    text-align: center;
+}
+
+.indiv_rescrs figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center image and caption */
+}
+
+.indiv_rescrs img {
+    width: 60%; /* Adjust image size */
+    margin: 0 auto;
+}
+
 /* Footer */
 .footer-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
+    color: white;
 }
 
 .contact-info, .quick-links {
-    background: #3a00ff;
+    background: #00274C;
     padding: 1rem;
     border-radius: var(--border-radius);
 }
 
 .footer-bottom {
     grid-column: 1 / -1;
-    background: #d42257;
+    background: linear-gradient(90deg, #131516, #00274C, #2F65A7, #00274C, #131516);
     text-align: center;
     padding: 0.5rem;
     color: #fff;
@@ -161,7 +268,6 @@ img {
     text-decoration: underline;
 }
 
-/* Adjustments for fluid layout */
 body, html {
     margin: 0;
     padding: 0;
@@ -173,9 +279,84 @@ main, header, footer {
     max-width: 1200px;
     margin: 0 auto;
 }
+.back-to-top {
+    position: fixed;
+    bottom: 20px; /* Adjusts how far from the bottom of the page the link appears */
+    right: 20px; /* Positions the link at the right end of the page */
+    background-color: #9A3324; /* University of Michigan Blue */
+    color: #fff; /* White text for contrast */
+    padding: 10px 15px;
+    border-radius: 5px; /* Adds rounded corners */
+    text-decoration: none; /* Remove underline from the link */
+    font-weight: bold; /* Emphasize the text */
+    z-index: 1000; /* Ensures it stays on top of other content */
+}
 
-@media (min-width: 600px) {
-    nav ul {
-        grid-template-columns: repeat(4, 1fr);
+.back-to-top:hover, .back-to-top:focus {
+    background-color: #FFCB05; /* Maize on hover */
+    color: #00274C; /* Switch text color to blue */
+    text-decoration: underline; /* Underline when hovered */
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto; /* Disables smooth scrolling for users who prefer reduced motion */
     }
+
+    .skip a {
+        transition: none; /* Removes transition for focusable skip link */
+    }
+
+    /* Disable any parallax effects */
+    .overview {
+        background-attachment: initial;
+    }
+
+    /* Other elements with motion-related effects should have transitions removed */
+    a, button, input, textarea, select {
+        transition: none;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    nav ul {
+        grid-template-columns: repeat(4, 1fr); /* Updated from style.css */
+    }
+
+    /* Ensure content scales well on wider screens */
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 5fr 1fr;
+        row-gap: 15px;
+    }
+
+    .about, .method, .clients, .contact {
+        grid-column: 2 / span 1;
+    }
+
+    /* Adding larger screen adjustments for layout */
+    .about-image, .method-image, .clients-image, .contact-image {
+        grid-column: 1 / -1;
+        max-height: 600px;
+    }
+
+    .text-block {
+        display: grid;
+        place-self: center;
+        text-align: center;
+    }
+
+    .text-block {
+        max-height: 250px;
+        overflow-y: auto; /* Allows scrolling for overflowed content */
+    }
+}
+
+/* Retained original code from style.css */
+body {
+    background-color: #ffffff;
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
 }
