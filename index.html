@@ -15,13 +15,15 @@
     <title>MSI Compass: Student Success Portal</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="skip">
         <a href = "#main" id="top">Skip to Main Content</a>
     </div>
     <header>
-        <!--<img src="images/UMSI_signature_vertical_informal_solidblue.jpg" alt="UMSI Logo">-->
         <nav>
             <ul>
                 <li><a href = "index.html">Home</a></li>
@@ -30,12 +32,12 @@
                 <li><a href = "FG.html">First Gen</a></li>
             </ul>
         </nav>
-        <h1>MSI Compass: Student Success Portal</h1>
+        <h1 class="msi-compass-h1">MSI Compass: Student Success Portal</h1>
 
     </header>
     <main id="main">
         <section class="intro">
-            <h2>Welcome to the UM Grad Success Navigator</h2>
+            <h2>Welcome to the UM Grad Success Navigator!</h2>
             <p> Navigate your journey at University of Michigan—your go-to guide for academic success, balance, and well-being.</p>
             <p>Explore tailored resources like CEW+, the International Center, and support for first-generation students, all designed to help you thrive during your time at UMSI.</p>
         </section>
@@ -44,7 +46,7 @@
             <h2>Academic Success</h2>
             <p>Maximize your academic potential with resources designed to guide you through every step of your journey at UMSI. From personalized advising to study spaces and tutoring services, find everything you need to stay on top of your coursework and achieve your academic goals.</p>
             <ul class="resource-list">
-                <li>
+                <li class="main-item">
                     <a href = "https://sites.google.com/umich.edu/msiacademicadvising/home" target="_blank">MSI Academic Advising Website</a>
                     <ul>
                         <li>
@@ -73,85 +75,89 @@
                         </li>
                     </ul>
                 </li>
-                <li>
+                <li class="main-item">
                     <a href = "https://admissions.umich.edu/explore-visit/blog/best-study-spots-campus" target="_blank">Study spaces on Campus</a>
                     <div class="description">
                         Explore a variety of study spaces across campus, perfect for focused work or group study sessions.
                         </div>
                 </li>
-                <li>
+                <li class="main-item">
                     <a href = "https://www.lib.umich.edu/" target="_blank">U-M Library</a>
                     <div class="description">
                         Access a vast array of academic resources, including research databases, journals, and study materials.
                         </div>
                 </li>
             </ul>
+            <figure>
+                <img src="images/FG_front.jpeg" alt="Two students walking through an archway on campus, with modern buildings and flowering trees visible in the background on a sunny day." width="80%" height="80%">
+                <figcaption>Spring of UM</figcaption>
+            </figure>
         </section>
         
         <section class="school-life-balance">
             <h2>School-life Balance</h2>
             <p>Achieve a fulfilling balance between your studies and personal life with our curated support services. Explore resources like CEW+, the International Center, and student organizations that help you thrive both inside and outside the classroom.</p>
             <ul class="resource-list">
-                <li>
+                <li class="main-item">
                     <a href = "CEW+.html">Center for the Education of Women+</a>
                     <div class="description">
                         Get access to resources that support the personal, academic, and professional goals of women and underserved students. 
                     </div>
                 </li>
-                <li>
+                <li class="main-item">
                     <a href = "IC.html">International Center</a>
                     <div class="description">
                         The go-to place for international students to find information on visas, cultural adjustment, and international student programming.
                     </div>
                 </li>
-                <li>
+                <li class="main-item">
                     <a href = "FG.html">First-Generation Center</a>
                     <div class="description">
                         Resources and support tailored to the unique needs of first-generation college students at U-M.
                     </div>
                 </li>
-                <li>
+                <li class="main-item">
                     <a href = "https://basicneeds.studentlife.umich.edu/" target="_blank">Basic Needs</a>
                     <div class="description">
                         Learn about the services that address essential needs like food, housing, and financial stability.
                     </div>
                 </li>
-                <li>
+                <li class="main-item">
                     <a href = "https://recsports.umich.edu/" target="_blank">Recreational Sports</a>
-                    <figure>
-                        <img src="images/UMSI_CampusFall_UMSIBackpack_02.jpg" alt="A student wears a UMSI backpack in fall on the drag.">
-                        <figcaption>UMSI out in the fall!</figcaption>
-                    </figure>
                     <div class="description">
                         Find opportunities to engage in physical activity through intramural sports, fitness classes, and recreational facilities.
                     </div>
                 </li>
-                <li>
+                <li class="main-item">
                     <a href = "https://maizepages.umich.edu/organizations" target="_blank">Student Organizations</a>
                     <div class="description">
                         Connect with student-led groups and organizations to build community and explore your interests outside the classroom.
                     </div>
                 </li>
             </ul>
+            <figure>
+                <img src="images/UMSI_CampusFall_UMSIBackpack_02.jpg" alt="A student wears a UMSI backpack in fall on the drag.">
+                <figcaption>UMSI out in the fall!</figcaption>
+            </figure>
         </section>
 
         <section class="crisis-resources">
             <h2>Resources in times of crisis</h2>
             <p>Find the support you need during challenging times with our range of crisis resources. Access services like the food pantry, counseling, and wellness programs to help you overcome obstacles and maintain your well-being.</p>
             <ul class="resource-list">
-                <li>
+                <li class="main-item">
                     <a href = "https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources" target="_blank">Emergency & Supportive Contacts</a>
                     <div class="description">
                         Call for support and help if you are in a difficult time. 
                     </div>
                 </li>
-                <li>
+                <li class="main-item">
                     <a href = "https://mbc.studentlife.umich.edu/" target="_blank">Food Pantry</a>
                     <div class="description">
                         Access food support services for students experiencing food insecurity or needing immediate assistance. 
                     </div>
                 </li>
-                <li>
+                <li class="main-item">
                     <a href = "https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources" target="_blank">Student Support Services</a>
                     <div class="description">
                         Find comprehensive support for academic, personal, and social challenges, ensuring students succeed during difficult times.
@@ -177,17 +183,7 @@
                         </li>
                     </ul>
                 </li>
-                <li>
-                    <a href = "https://uhs.umich.edu/" target="_blank">University Health Services (UHS)</a>
-                    <figure>
-                        <img src="images/UHS.jpg" alt="University Health Services building">
-                        <figcaption>University Health Services Building</figcaption>
-                    </figure>
-                    <div class="description">
-                        Access a range of healthcare services, from routine medical care to mental health support, right on campus.
-                    </div>
-                </li>
-                <li>
+                <li class="main-item">
                     <a href = "https://caps.umich.edu/" target="_blank">Counceling & Psychological Services</a>
                     <div class="description">
                         Get support for mental health challenges through counseling, workshops, and therapy sessions.
@@ -213,7 +209,17 @@
                         </li>
                     </ul>
                 </li>
+                <li class="main-item">
+                    <a href = "https://uhs.umich.edu/" target="_blank">University Health Services (UHS)</a>
+                    <div class="description">
+                        Access a range of healthcare services, from routine medical care to mental health support, right on campus.
+                    </div>
+                </li>
             </ul>
+            <figure>
+                <img src="images/UHS.jpg" alt="University Health Services building">
+                <figcaption>University Health Services Building</figcaption>
+            </figure>
         </section>
         <!-- Content taken & modified from ChatGPT with the prompt, "write me a webpage of intro content to help University of Michigan Master of Information students navigate different resources for being successful in grad school - this will include academic resources, physical health resources, mental health resources, support for life outside the classroom"
         ChatGPT. (2024). ChatGPT (Octobor 13th version) [Large language model]. -->
