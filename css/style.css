@@ -49,11 +49,10 @@ a, a::before, a::after {
     font-weight: bolder;
 }
 
-a:focus, a:hover,
-button:focus, button:hover,
+a:focus, a:hover
+/* button:focus, button:hover,
 input:focus, input:hover,
-textarea:focus, textarea:hover,
-select:focus, select:hover {
+textarea:focus, textarea:hover */{
     text-decoration: underline;
     outline: 3px solid #ffffff; /* // Adds a bold yellow outline to indicate focus */
     background-color: #bad8fc; /* // Changes background for better visibility */
@@ -77,80 +76,9 @@ select:focus, select:hover {
     top: 20px; /* Becomes visible when focused */
 }
 
-.resource-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 columns */
-    gap: 1.5rem; /* Add some spacing between items */
-}
-
-/* Ensuring a specific child spans the entire row */
-/* Academic Success's first child, Resources in times of crisis's last child, and First-Gen Gateway's last child */
-.academic-success li:first-child,
-.crisis-resources li:last-child,
-.first-gen-gateway li:last-child {
-    grid-column: span 2; /* Span the entire row */
-}
-
-/* Align all children of certain sections horizontally on the same row */
-/* Immigration and Visa, Cultural Challenges and Support, Academic and Career Guidance, and Paying for School */
-.immigration-visa ul,
-.cultural-challenges-support ul,
-.academic-career-guidance ul,
-.paying-for-school ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Create horizontal alignment */
-    gap: 1rem;
-}
-
-/* Main item styling to ensure consistent presentation */
-.main-item {
-    text-align: center;
-    margin-bottom: 1rem;
-}
-
-.main-item.has-children {
-    grid-column: span 2; /* These items will span the entire row */
-}
-
-/* Main items that don't have children unordered lists */
-.main-item:not(.has-children) {
-    grid-column: auto; /* These items should take up one column */
-}
-
-.main-item ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Auto-adjust columns for child items */
-    gap: 0.5rem;
-}
-
-
-.main-item a {
-    text-decoration: underline;
-    color: #3a00ff; /* Link color */
-    font-weight: bold; /* Emphasize the main items */
-}
-
-.main-item ul li a {
-    font-weight: normal; /* Child items will have normal weight */
-    text-decoration: underline; /* Remove underline from child items */
-}
-
-.intro p, .academic-success p, .school-life-balance p, .crisis-resources p{
-    text-align: center;
-}
-
-/* Layout with CSS Grid */
-header, main, footer {
-    display: grid;
-    gap: 1rem;
-    padding: 1rem;
-}
-
-header {
-    grid-template-columns: 1fr;
-    align-items: center;
-}
-
+/* navigation */
+/* navigation */
+/* navigation */
 nav ul {
     display: grid;
     gap: 0.5rem;
@@ -175,9 +103,20 @@ nav ul a {
     border-radius: var(--border-radius);
 }
 
-nav ul a.active, nav ul a:hover, nav ul a:focus {
+/* remove 'nav ul a.active' from this selector to prevent color changes */
+nav ul a:hover, nav ul a:focus {
     background: #412d86;
     color: #ffffff;
+}
+
+/* new rule to indicate the active link */
+nav ul a.active {
+    font-weight: bold;
+    text-decoration: underline;
+    font-style: italic;
+    border: 5px solid #ffcb05; /* Adds a border to the active link */
+    padding: 0.75rem 1rem; /* Extra padding for emphasis */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
 }
 
 
@@ -186,33 +125,149 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
+    margin: 20px;
 }
 
-.indiv_rescrs {
+.resource-list {
     display: grid;
-    gap: 1rem;
-    /*background: #0f6f38;*/
-    border-radius: var(--border-radius);
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    gap: 1.5rem; /* Add some spacing between items */
+    padding: 0;
+    list-style: none;
+}
+
+.resource-list li {
+    background: #f9f9f9;
     padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for each item */
+    display: flex;
+    flex-direction: column; /* Ensures subtitle and description stack */
 }
 
-.indiv_rescrs h2 {
-    background-color: #412d86;
-    color: #fff;
+
+.resource-list li a {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #11296b;
+}
+
+.resource-list li .description {
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+.main-item {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-size: smaller;
+}
+
+.intro, .page-intro {
+    text-align: center;
+}
+
+.intro p:last-child {
+    text-decoration: underline;
+}
+
+.action {
+    font-weight: bolder;
+}
+
+.collapsible > p {
+    text-align: center;
+    font-size: medium;
+}
+
+.collapsible > ul, .collapsible > figure {
+    display: none; /* By default, hide the main section contents */
+}
+
+.collapsible.open > ul, .collapsible.open > figure {
+    display: block; /* Show content when section is "open" */
+}
+
+.collapsible .resource-list {
+    display: none;
+}
+
+.collapsible.open .resource-list {
+    display: grid; /* Apply grid layout when section is open */
+    grid-template-columns: 1fr 1fr; /* Maintain 2-column layout */
+    gap: 1.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    background-color: #702082;
+    color: #ffcb05;
     padding: 0.5rem;
-    border-radius: var(--border-radius);
+    text-align: center;
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+h2:hover {
+    background-color: #8b47a5;
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
 
-.indiv_rescrs p, .indiv_rescrs ul {
-    padding: 0 0.5rem;
+h2::before, h2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 4px;
+    background-color: #ffcb05;
+    margin: 0.5rem auto;
+    transition: width 0.3s ease;
+}
+
+h2:hover::before, h2:hover::after {
+    width: 60px; /* Expand on hover */
 }
 
 .indiv_rescrs ul {
-    display: grid; /* Use grid to structure unordered lists */
-    grid-template-columns: 1fr 1fr; /* 2-column layout */
-    gap: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    padding: 0;
+    list-style: none;
 }
+
+.indiv_rescrs ul li {
+    background: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Ensures subtitle and description stack */
+}
+
+
+.indiv_rescrs ul li .subtitle {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #11296b;
+}
+
+
+.indiv_rescrs ul li .description {
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+
+
 
 /* Images */
 img {
@@ -223,6 +278,7 @@ img {
 
 figcaption {
     text-align: center;
+    font-size: small;
 }
 
 .indiv_rescrs figure {
@@ -231,54 +287,22 @@ figcaption {
     align-items: center; /* Center image and caption */
 }
 
-.indiv_rescrs img {
-    width: 60%; /* Adjust image size */
-    margin: 0 auto;
-}
-
 /* Footer */
-.footer-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+.contact-info {
+    background: linear-gradient(90deg, #131516, #00274C, #2F65A7, #00274C, #131516); /*#00274C;*/
+    padding: 1rem;
+    border-radius: var(--border-radius);
     color: white;
 }
 
-.contact-info, .quick-links {
-    background: #00274C;
-    padding: 1rem;
-    border-radius: var(--border-radius);
-}
-
 .footer-bottom {
-    grid-column: 1 / -1;
     background: linear-gradient(90deg, #131516, #00274C, #2F65A7, #00274C, #131516);
     text-align: center;
     padding: 0.5rem;
     color: #fff;
 }
 
-.quick-links ul {
-    display: grid;
-    gap: 0.5rem;
-}
-
-.quick-links a {
-    color: #fff;
-    text-decoration: underline;
-}
-
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-}
-
-main, header, footer {
-    max-width: 85%;
-    margin: 0 auto;
-}
+/* back to top */
 .back-to-top {
     position: fixed;
     bottom: 20px; /* Adjusts how far from the bottom of the page the link appears */
@@ -298,6 +322,101 @@ main, header, footer {
     text-decoration: underline; /* Underline when hovered */
 }
 
+/* Modal button */
+.feedback-button {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: #00796b;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size:larger;
+    text-decoration: underline;
+    z-index: 1000;
+}
+
+.feedback-button button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+}
+
+.feedback-button button:hover, .feedback-button button:focus {
+    background-color: #004d40;
+    color: #ffffff;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1001; /* Above other content */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+}
+
+.modal-content label, .modal-content input, .modal-content textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.modal-content input, .modal-content textarea {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.modal-content button {
+    background-color: #00796b;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #004d40;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
 @media screen and (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto; /* Disables smooth scrolling for users who prefer reduced motion */
@@ -312,51 +431,71 @@ main, header, footer {
         background-attachment: initial;
     }
 
-    /* Other elements with motion-related effects should have transitions removed */
     a, button, input, textarea, select {
         transition: none;
     }
 }
 
-@media only screen and (min-width: 600px) {
+
+/* Tablet view */
+@media screen and (min-width: 768px) {
+    /* Align navigation bar to top right */
     nav ul {
-        grid-template-columns: repeat(4, 1fr); /* Updated from style.css */
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
     }
 
-    /* Ensure content scales well on wider screens */
-    .container {
-        display: grid;
-        grid-template-columns: 1fr 5fr 1fr;
-        row-gap: 15px;
+    h1 {
+        margin: 5rem;
     }
 
-    .about, .method, .clients, .contact {
-        grid-column: 2 / span 1;
+    .collapsible > p {
+        display: none;
     }
 
-    /* Adding larger screen adjustments for layout */
-    .about-image, .method-image, .clients-image, .contact-image {
-        grid-column: 1 / -1;
-        max-height: 600px;
+    body {
+        margin: 2rem;
     }
 
-    .text-block {
-        display: grid;
-        place-self: center;
+    footer {
         text-align: center;
-    }
-
-    .text-block {
-        max-height: 250px;
-        overflow-y: auto; /* Allows scrolling for overflowed content */
+        font-size: small;
     }
 }
 
-/* Retained original code from style.css */
-body {
-    background-color: #ffffff;
-    color: black;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1rem;
-    line-height: 1.5;
+/* Desktop view */
+@media screen and (min-width: 1024px) {
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+        gap: 1.5rem;
+    }
+
+    h1 {
+        margin: 10rem;
+    }
+
+    .index-main {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .cew-main, .ic-main, .fg-main {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Make the first element span the entire row */
+    .index-main > *:first-child, 
+    .cew-main > *:first-child, 
+    .ic-main > *:first-child, 
+    .fg-main > *:first-child, 
+    #fggateway  {
+        grid-column: 1 / -1;
+    }
+
+    .collapsible > p {
+        display: none;
+    }
+
+    /* footer change */
 }
