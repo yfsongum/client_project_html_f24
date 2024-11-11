@@ -26,7 +26,7 @@
     <header>
         <nav>
             <ul>
-                <li><a href = "index.html">Home</a></li>
+                <li><a href = "index.html" class="active">Home</a></li>
                 <li><a href = "CEW+.html">CEW+</a></li>
                 <li><a href = "IC.html">IC</a></li>
                 <li><a href = "FG.html">First Gen</a></li>
@@ -35,45 +35,42 @@
         <h1 class="msi-compass-h1">MSI Compass: Student Success Portal</h1>
 
     </header>
-    <main id="main">
+    <main class="index-main" id="main">
         <section class="intro">
-            <h2>Welcome to the UM Grad Success Navigator!</h2>
-            <p> Navigate your journey at University of Michigan—your go-to guide for academic success, balance, and well-being.</p>
-            <p>Explore tailored resources like CEW+, the International Center, and support for first-generation students, all designed to help you thrive during your time at UMSI.</p>
+            <p>Navigate your journey at University of Michigan—your go-to guide for academic success, balance, and well-being!</p>
+            <p>Explore tailored resources all designed to help you thrive during your time at UMSI.</p>
+            <br>
+            <p>👇 <span class="action">click</span> on the topics you are interested in learning! 👇</p>
         </section>
 
-        <section class="academic-success">
+        <section class="collapsible">  <!--class="academic-success"-->
             <h2>Academic Success</h2>
+            <br>
             <p>Maximize your academic potential with resources designed to guide you through every step of your journey at UMSI. From personalized advising to study spaces and tutoring services, find everything you need to stay on top of your coursework and achieve your academic goals.</p>
             <ul class="resource-list">
+                 <li class="main-item">
+                    <a href = "https://sites.google.com/umich.edu/msiacademicadvising/fall-2024-important-dates" target="_blank">Important Dates</a>
+                    <div class="description">
+                        Stay informed about key deadlines such as course registration, drop/add periods, and university holidays to keep your academic journey on track.
+                    </div>
+                </li>
                 <li class="main-item">
-                    <a href = "https://sites.google.com/umich.edu/msiacademicadvising/home" target="_blank">MSI Academic Advising Website</a>
-                    <ul>
-                        <li>
-                            <a href = "https://sites.google.com/umich.edu/msiacademicadvising/fall-2024-important-dates" target="_blank">Important Dates (Fall 2024)</a>
-                            <div class="description">
-                                Stay informed about key deadlines such as course registration, drop/add periods, and university holidays to keep your academic journey on track.
-                                </div>
-                        </li>
-                        <li>
-                            <a href = "https://sites.google.com/umich.edu/msiacademicadvising/academic-advising" target="_blank">Academic Advising</a>
-                            <div class="description">
-                                Access one-on-one advising sessions to receive insights into course requirements, degree progress, and academic strategies.
-                                </div>
-                        </li>
-                        <li>
-                            <a href = "https://sites.google.com/umich.edu/msiacademicadvising/help-who-do-i-contact" target="_blank">Help! Who do I contact?</a>
-                            <div class="description">
-                                Discover the right contacts for various student services, ensuring you reach the correct advisor or department for your specific needs.
-                                </div>
-                        </li>
-                        <li>
-                            <a href = "https://sites.google.com/umich.edu/umsitutoring/home" target="_blank">Tutoring Site</a>
-                            <div class="description">
-                                Connect with tutoring resources that can provide you with extra support in challenging courses and subjects.
-                                </div>
-                        </li>
-                    </ul>
+                    <a href = "https://sites.google.com/umich.edu/msiacademicadvising/academic-advising" target="_blank">Academic Advising</a>
+                    <div class="description">
+                        Access one-on-one advising sessions to receive insights into course requirements, degree progress, and academic strategies.
+                    </div>
+                </li>
+                <li class="main-item">
+                    <a href = "https://sites.google.com/umich.edu/msiacademicadvising/help-who-do-i-contact" target="_blank">Help! Who do I contact?</a>
+                    <div class="description">
+                        Discover the right contacts for various student services, ensuring you reach the correct advisor or department for your specific needs.
+                    </div>
+                </li>
+                <li class="main-item">
+                    <a href = "https://sites.google.com/umich.edu/umsitutoring/home" target="_blank">Tutoring Site</a>
+                    <div class="description">
+                        Connect with tutoring resources that can provide you with extra support in challenging courses and subjects.
+                    </div>
                 </li>
                 <li class="main-item">
                     <a href = "https://admissions.umich.edu/explore-visit/blog/best-study-spots-campus" target="_blank">Study spaces on Campus</a>
@@ -94,8 +91,9 @@
             </figure>
         </section>
         
-        <section class="school-life-balance">
+        <section class="collapsible"> <!-- class="school-life-balance" -->
             <h2>School-life Balance</h2>
+            <br>
             <p>Achieve a fulfilling balance between your studies and personal life with our curated support services. Explore resources like CEW+, the International Center, and student organizations that help you thrive both inside and outside the classroom.</p>
             <ul class="resource-list">
                 <li class="main-item">
@@ -141,8 +139,9 @@
             </figure>
         </section>
 
-        <section class="crisis-resources">
-            <h2>Resources in times of crisis</h2>
+        <section class="collapsible"> <!-- class="crisis-resources" -->
+            <h2>In times of crisis</h2>
+            <br>
             <p>Find the support you need during challenging times with our range of crisis resources. Access services like the food pantry, counseling, and wellness programs to help you overcome obstacles and maintain your well-being.</p>
             <ul class="resource-list">
                 <li class="main-item">
@@ -158,56 +157,34 @@
                     </div>
                 </li>
                 <li class="main-item">
-                    <a href = "https://sites.google.com/umich.edu/msiacademicadvising/student-support-resources" target="_blank">Student Support Services</a>
+                    <a href = "https://lsa.umich.edu/eli" target="_blank">English Language Institute (ELI)</a>
                     <div class="description">
-                        Find comprehensive support for academic, personal, and social challenges, ensuring students succeed during difficult times.
+                        Improve your English language skills with courses and workshops tailored for non-native speakers. 
                     </div>
-                    <ul>
-                        <li>
-                            <a href = "https://lsa.umich.edu/eli" target="_blank">English Language Institute (ELI)</a>
-                            <div class="description">
-                                Improve your English language skills with courses and workshops tailored for non-native speakers. 
-                            </div>
-                        </li>
-                        <li>
-                            <a href = "https://lsa.umich.edu/sweetland" target="_blank">Sweetland Writing Center</a>
-                            <div class="description">
-                                Receive individualized writing support, from brainstorming ideas to refining your final draft. 
-                            </div>
-                        </li>
-                        <li>
-                            <a href = "https://ssd.umich.edu/" target="_blank">Services for Students with Disabilities (SSD)</a>
-                            <div class="description">
-                                Learn about the accommodations and support available for students with disabilities to ensure equitable access to all campus resources. 
-                            </div>
-                        </li>
-                    </ul>
+                </li>
+                <li class="main-item">
+                    <a href = "https://lsa.umich.edu/sweetland" target="_blank">Sweetland Writing Center</a>
+                    <div class="description">
+                        Receive individualized writing support, from brainstorming ideas to refining your final draft. 
+                    </div>
+                </li>
+                <li class="main-item">
+                    <a href = "https://ssd.umich.edu/" target="_blank">Services for Students with Disabilities (SSD)</a>
+                    <div class="description">
+                        Learn about the accommodations and support available for students with disabilities to ensure equitable access to all campus resources. 
+                    </div>
                 </li>
                 <li class="main-item">
                     <a href = "https://caps.umich.edu/" target="_blank">Counceling & Psychological Services</a>
                     <div class="description">
                         Get support for mental health challenges through counseling, workshops, and therapy sessions.
                     </div>
-                    <ul>
-                        <li>
-                            <a href = "https://docs.google.com/document/d/1EWAFqqK_S1VMV9OyToz5gsUUP9oqXXNSBjcKviY_XVE/edit?usp=sharing" target="_blank">UMSI Embedded CAPS Counselor</a>
-                            <div class="description">
-                                A dedicated counselor is available for UMSI students, providing tailored mental health support within the school. 
-                            </div>
-                        </li>
-                        <li>
-                            <a href = "https://caps.umich.edu/individual-peer-counseling" target="_blank">Peer Counseling</a>
-                            <div class="description">
-                                Connect with trained student counselors who can offer a listening ear and peer support during challenging times. 
-                            </div>
-                        </li>
-                        <li>
-                            <a href = "https://uhs.umich.edu/wolverine-wellness" target="_blank">Wolverine Wellness</a>
-                            <div class="description">
-                                Access wellness programs and resources that promote holistic well-being, from sleep and nutrition to stress management. 
-                            </div>
-                        </li>
-                    </ul>
+                </li>
+                <li class="main-item">
+                    <a href = "https://uhs.umich.edu/wolverine-wellness" target="_blank">Wolverine Wellness</a>
+                    <div class="description">
+                        Access wellness programs and resources that promote holistic well-being, from sleep and nutrition to stress management. 
+                    </div>
                 </li>
                 <li class="main-item">
                     <a href = "https://uhs.umich.edu/" target="_blank">University Health Services (UHS)</a>
@@ -221,40 +198,105 @@
                 <figcaption>University Health Services Building</figcaption>
             </figure>
         </section>
-        <!-- Content taken & modified from ChatGPT with the prompt, "write me a webpage of intro content to help University of Michigan Master of Information students navigate different resources for being successful in grad school - this will include academic resources, physical health resources, mental health resources, support for life outside the classroom"
-        ChatGPT. (2024). ChatGPT (Octobor 13th version) [Large language model]. -->
+        
+        <div class="feedback-button">
+            <button id="feedback-btn">Feedback</button>
+        </div>
+        
+        <div id="feedback-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Feedback</h2>
+                <form id="feedback-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="feedback">Your Feedback:</label>
+                    <textarea id="feedback" name="feedback" rows="4" required></textarea>
+                    
+                    <button type="submit">Submit Feedback</button>
+                </form>
+            </div>
+        </div>
+        
         <div class="back-to-top">
             <a href = "#top">Back to top</a>
         </div>
     </main>
     <footer>
-        <div class="footer-content">
-            <div class="contact-info">
-                <h3>Contact Us</h3>
-                <ul>
-                    <li>UMSI Student Success Team</li>
-                    <li>University of Michigan, School of Information</li>
-                    <li>105 S State St, Ann Arbor, MI 48109</li>
-                    <li>Email: <a href="mailto:umsi.academicsuccess@umich.edu">umsi.academicsuccess@umich.edu</a></li>
-                </ul>
-            </div>
-    
-            <div class="quick-links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="CEW+.html">CEW+</a></li>
-                    <li><a href="IC.html">International Center</a></li>
-                    <li><a href="FG.html">First-Generation Student Resources</a></li>
-                    <li><a href="https://sites.google.com/umich.edu/msiacademicadvising/home" target="_blank">UMSI Academic Advising</a></li>
-                    <li><a href="https://caps.umich.edu/" target="_blank">CAPS</a></li>
-                </ul>
-            </div>
+        <div class="contact-info">
+            <h3>Contact Us</h3>
+            <ul>
+                <li>UMSI Student Success Team</li>
+                <li>University of Michigan, School of Information</li>
+                <li>105 S State St, Ann Arbor, MI 48109</li>
+                <li>Email: <a href="mailto:umsi.academicsuccess@umich.edu">umsi.academicsuccess@umich.edu</a></li>
+            </ul>
         </div>
+    
+        <!-- <div class="quick-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="CEW+.html">CEW+</a></li>
+                <li><a href="IC.html">International Center</a></li>
+                <li><a href="FG.html">First-Generation Student Resources</a></li>
+                <li><a href="https://sites.google.com/umich.edu/msiacademicadvising/home" target="_blank">UMSI Academic Advising</a></li>
+                <li><a href="https://caps.umich.edu/" target="_blank">CAPS</a></li>
+            </ul>
+        </div> -->
     
         <div class="footer-bottom">
-            <p>© 2024 University of Michigan School of Information. All rights reserved.</p>
+            <p>© <span id="current-year"></span> University of Michigan School of Information. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const headings = document.querySelectorAll(".collapsible h2");
+        
+            headings.forEach(heading => {
+                heading.addEventListener("click", function() {
+                    // Toggle the "open" class on the parent section to show/hide content
+                    const section = heading.parentElement;
+                    section.classList.toggle("open");
+                });
+            });
+        });
+        
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+        
+        // Get elements
+        const feedbackBtn = document.getElementById('feedback-btn');
+        const modal = document.getElementById('feedback-modal');
+        const closeBtn = document.querySelector('.close');
+
+        // Open modal when feedback button is clicked
+        feedbackBtn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // Close modal when "X" is clicked
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Close modal when user clicks outside the modal content
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Handle form submission (you can add actual submission handling here)
+        document.getElementById('feedback-form').onsubmit = function(event) {
+            event.preventDefault(); // Prevents page refresh
+            alert('Thank you for your feedback!');
+            modal.style.display = "none"; // Close the modal
+            this.reset(); // Reset form fields
+        }
+    </script>
     
 </body>
 </html>

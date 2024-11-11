@@ -23,60 +23,112 @@
                 <li><a href = "index.html">Home</a></li>
                 <li><a href = "CEW+.html">CEW+</a></li>
                 <li><a href = "IC.html">IC</a></li>
-                <li><a href = "FG.html">First Gen</a></li>
+                <li><a href = "FG.html" class="active">First Gen</a></li>
             </ul>
         </nav>
         <h1 class="fg-h1">First-Generation Student Center</h1>
     </header>
     
-    <main id="main"> 
+    <main class="fg-main" id="main"> 
         <div class="page-intro">
             <p>Being the first in your family to attend college comes with its own set of challenges and opportunities, 
                 and we're here to provide the resources and support you need to thrive in the University of Michigan.
             </p>
         </div>
-        <div class="indiv_rescrs">
-            <h2><a href="https://firstgen.umich.edu/gateway/" target="_blank">First-Gen Gateway</a></h2>
-            <p>Whether you're looking for academic support, community connections, or just a place to ask questions, the Gateway is your first stop to get connected to resources for first-generation students.</p>
+
+        <div class="indiv_rescrs" id="fggateway">
+            <h2>First-Gen Gateway</h2>
+            <br>
             <ul>
-                <li>Location: Office of Academic Multicultural Initiatives on the 3rd floor of the Student Activities Building at 515 E. Jefferson St.</li>
-                <li>Leadership Team from four key offices on campus:
-                    <ul>
-                        <li>Comprehensive Studies Program (CSP)</li>
-                        <li>Multi-Ethnic Student Affairs (MESA)</li>
-                        <li>Office of Academic Multicultural Initiatives (OAMI)</li>
-                        <li>Office of New Student Programs (ONSP)</li>    
-                    </ul>
+                <li>
+                    <div class="subtitle">Location</div>
+                    <div class="description">
+                        Office of Academic Multicultural Initiatives on the 3rd floor of the Student Activities Building at 515 E. Jefferson St.
+                    </div>
+                </li>
+                <li>
+                    <div class="subtitle"><a href="https://firstgen.umich.edu/gateway/" target="_blank">Leadership Team from four key offices on campus</a></div>
+                    <div class="description">
+                        Comprehensive Studies Program (CSP), Multi-Ethnic Student Affairs (MESA), Office of Academic Multicultural Initiatives (OAMI), Office of New Student Programs (ONSP)
+                    </div>
                 </li>
             </ul>
+            <!-- <br>
+            <figure>
+                <img src="images/FG_communication.jpeg" alt="Tutor and student communicating ideas">
+                <figcaption>Tutor and student communicating ideas</figcaption>
+            </figure> -->
+        </div>
+
+        <div class="indiv_rescrs">
+            <h2>Paying for School</h2>
+            <br>
+            <ul>
+                <li>
+                    <div class="subtitle">Understanding Your Financial Aid Package</div>
+                    <div class="description">
+                        financial aid, loans, and scholarships
+                    </div>
+                </li>
+                <li>
+                    <div class="subtitle"><a href="https://firstgen.umich.edu/school-costs/" target="_blank">Budgeting Tools</a></div>
+                    <div class="description">
+                        learn how to create a budget that works for your needs, 
+                    from managing daily expenses to planning for the future.
+                    </div>
+                </li>
+                <!-- <li>
+                    <div class="subtitle">Emergency Funds</div>
+                </li> -->
+            </ul>
+            <br>
             <figure>
                 <img src="images/FG_communication.jpeg" alt="Tutor and student communicating ideas"> <!-- width="80%" height="80%"-->
                 <figcaption>Tutor and student communicating ideas</figcaption>
             </figure>
         </div>
+
         <div class="indiv_rescrs">
-            <h2><a href="https://firstgen.umich.edu/school-costs/" target="_blank">Paying for School</a></h2>
-            <p>We understand that financial planning can be one of the most stressful parts of the college experience, especially for first-generation students. 
-                Navigate our website for everything you need to know about managing finances at UM.
-            </p>
+            <h2>News and Stories</h2>
+            <br>
             <ul>
-                <li>Understanding Your Financial Aid Package: financial aid, loans, and scholarships</li>
-                <li>Budgeting Tools: learn how to create a budget that works for your needs, 
-                    from managing daily expenses to planning for the future.</li>
-                <li>Emergency Funds</li>
+                <li>
+                    <div class="subtitle">Student Stories</div>
+                </li>
+                <li>
+                    <div class="subtitle"><a href="https://firstgen.umich.edu/news/" target="_blank">Upcoming Events</a></div>
+                </li>
             </ul>
-        </div>
-        <div class="indiv_rescrs">
-            <h2><a href="https://firstgen.umich.edu/news/" target="_blank">News and Publications</a></h2>
-            <ul>
-                <li>Student Stories</li>
-                <li>Upcoming Events</li>
-            </ul>
+            <br>
             <figure>
                 <img src="images/FG_career.jpeg" alt="Guest speakers from indeed company giving a lecture"> <!-- width="80%" height="80%"-->
                 <figcaption>Guest speakers from indeed company giving a lecture</figcaption>
             </figure>
         </div>
+
+        <div class="feedback-button">
+            <button id="feedback-btn">Feedback</button>
+        </div>
+        
+        <div id="feedback-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Feedback</h2>
+                <form id="feedback-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="feedback">Your Feedback:</label>
+                    <textarea id="feedback" name="feedback" rows="4" required></textarea>
+                    
+                    <button type="submit">Submit Feedback</button>
+                </form>
+            </div>
+        </div>
+
         <div class="back-to-top">
             <a href = "#top">Back to top</a>
         </div>
@@ -84,34 +136,64 @@
     <!--Content to be revised: text, images, and hyperlinks.
         Amount of text is sufficient to meet client's objectives-->
         <footer>
-            <div class="footer-content">
-                <div class="contact-info">
-                    <h3>Contact Us</h3>
-                    <ul>
-                        <li>UMSI Student Success Team</li>
-                        <li>University of Michigan, School of Information</li>
-                        <li>105 S State St, Ann Arbor, MI 48109</li>
-                        <li>Email: <a href="mailto:umsi.academicsuccess@umich.edu">umsi.academicsuccess@umich.edu</a></li>
-                    </ul>
-                </div>
-        
-                <div class="quick-links">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="CEW+.html">CEW+</a></li>
-                        <li><a href="IC.html">International Center</a></li>
-                        <li><a href="FG.html">First-Generation Student Resources</a></li>
-                        <li><a href="https://sites.google.com/umich.edu/msiacademicadvising/home" target="_blank">UMSI Academic Advising</a></li>
-                        <li><a href="https://caps.umich.edu/" target="_blank">CAPS</a></li>
-                    </ul>
-                </div>
-            </div>
-        
-            <div class="footer-bottom">
-                <p>© 2024 University of Michigan School of Information. All rights reserved.</p>
-            </div>
-        </footer>
+        <div class="contact-info">
+            <h3>Contact Us</h3>
+            <ul>
+                <li>UMSI Student Success Team</li>
+                <li>University of Michigan, School of Information</li>
+                <li>105 S State St, Ann Arbor, MI 48109</li>
+                <li>Email: <a href="mailto:umsi.academicsuccess@umich.edu">umsi.academicsuccess@umich.edu</a></li>
+            </ul>
+        </div>
     
+        <!-- <div class="quick-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="CEW+.html">CEW+</a></li>
+                <li><a href="IC.html">International Center</a></li>
+                <li><a href="FG.html">First-Generation Student Resources</a></li>
+                <li><a href="https://sites.google.com/umich.edu/msiacademicadvising/home" target="_blank">UMSI Academic Advising</a></li>
+                <li><a href="https://caps.umich.edu/" target="_blank">CAPS</a></li>
+            </ul>
+        </div> -->
+    
+        <div class="footer-bottom">
+            <p>© <span id="current-year"></span> University of Michigan School of Information. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+
+        // Get elements
+        const feedbackBtn = document.getElementById('feedback-btn');
+        const modal = document.getElementById('feedback-modal');
+        const closeBtn = document.querySelector('.close');
+
+        // Open modal when feedback button is clicked
+        feedbackBtn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // Close modal when "X" is clicked
+        closeBtn.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Close modal when user clicks outside the modal content
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Handle form submission (you can add actual submission handling here)
+        document.getElementById('feedback-form').onsubmit = function(event) {
+            event.preventDefault(); // Prevents page refresh
+            alert('Thank you for your feedback!');
+            modal.style.display = "none"; // Close the modal
+            this.reset(); // Reset form fields
+        }
+    </script>
 </body>
 
 </html>
